@@ -1,7 +1,7 @@
-
 FROM ubuntu:22.04
 LABEL devops="anup dudhe"
 
+USER root
 RUN  apt install -y nodejs npm 
 RUN npm install -g n
 RUN n 14.17.0
