@@ -4,8 +4,8 @@ LABEL devops="anup dudhe"
 USER root
 
 RUN apt update  && \
-    apt install python3-pip && \
-    pip3 install virtualenv && \ 
+    apt install python3-pip -y && \
+    pip3 install virtualenv -y && \ 
     virtualenv venv && \
     source venv/bin/activate && \
     sudo apt update
