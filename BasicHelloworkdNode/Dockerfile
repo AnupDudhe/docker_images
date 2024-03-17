@@ -4,7 +4,7 @@ LABEL Devops="Anup"
 
 WORKDIR /usr/nodeapp
 
-ADD https://github.com/AnupDudhe/nodejs-on-ec2.git 
+ADD https://github.com/AnupDudhe/nodejs-on-ec2.git  .
 
 WORKDIR nodejs-on-ec2 
 
