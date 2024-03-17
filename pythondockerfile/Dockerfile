@@ -27,7 +27,7 @@ WORKDIR python-django
 
 EXPOSE  8000   
 
-CMD ["sh", "-c", ". venv/bin/activate && python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"]
+#CMD ["sh", "-c", ". venv/bin/activate && python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"]
 ENTRYPOINT ["python", "manage.py", "runserver", "0.0.0.0:8000"]
-ENTRYPOINT ["sh", "-c", ". venv/bin/activate && python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"]
+#ENTRYPOINT ["sh", "-c", ". venv/bin/activate && python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"]
 #CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]  
