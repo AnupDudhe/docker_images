@@ -29,4 +29,4 @@ COPY student.war webapps/student.war
 COPY context.xml conf/contex.xml
 
 EXPOSE 8080
-CMD bin/catalina.sh start
+CMD bin/catalina.sh run
