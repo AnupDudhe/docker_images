@@ -8,7 +8,8 @@ RUN  apt install git  python3 -y
 RUN  apt install python3-pip -y 
 RUN  pip3 install virtualenv   
 RUN  virtualenv venv 
-RUN /bin/bash -c "source venv/bin/activate"
+RUN . /python-django/venv/bin/activate
+#RUN /bin/bash -c "source venv/bin/activate"
 #RUN    source . venv/bin/activate 
 RUN    apt update
     
