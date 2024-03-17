@@ -1,4 +1,4 @@
-FROM nodejs:apline
+FROM nodejs:alpine
 
 LABEL Devops="Anup"
 
