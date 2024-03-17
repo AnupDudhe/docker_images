@@ -8,7 +8,7 @@ RUN apt update  && \
     pip3 install virtualenv  && \ 
     virtualenv venv && \
     source venv/bin/activate && \
-    sudo apt update
+    apt update
     
 RUN git clone https://github.com/mushfiq1998/string-tools-with-python-django.git && \
     pip install Django 
