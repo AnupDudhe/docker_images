@@ -3,10 +3,11 @@ LABEL devops="anup dudhe"
 
 USER root
 
-RUN apt update 
-RUN    apt install python3-pip -y 
-RUN    pip3 install virtualenv   
-RUN    virtualenv venv 
+RUN  apt update 
+RUN  apt install git -y
+RUN  apt install python3-pip -y 
+RUN  pip3 install virtualenv   
+RUN  virtualenv venv 
 RUN /bin/bash -c "source venv/bin/activate"
 #RUN    source . venv/bin/activate 
 RUN    apt update
