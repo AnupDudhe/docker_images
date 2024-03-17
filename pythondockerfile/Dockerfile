@@ -3,12 +3,12 @@ LABEL devops="anup dudhe"
 
 USER root
 
-RUN apt update  && \
-    apt install python3-pip -y && \
-    pip3 install virtualenv  && \ 
-    virtualenv venv && \
-    source venv/bin/activate && \
-    apt update
+RUN apt update 
+RUN    apt install python3-pip -y 
+RUN    pip3 install virtualenv   
+RUN    virtualenv venv 
+RUN    source venv/bin/activate 
+RUN    apt update
     
 RUN git clone https://github.com/mushfiq1998/string-tools-with-python-django.git && \
     pip install Django 
