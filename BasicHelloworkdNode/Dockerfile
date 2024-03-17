@@ -9,6 +9,6 @@ ADD .   .
 
 #WORKDIR nodejs-on-ec2 
 
-EXPOSE 8000
+EXPOSE 3000
 RUN npm install 
 CMD ["npm" , "start"]
