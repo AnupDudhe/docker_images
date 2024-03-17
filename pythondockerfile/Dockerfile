@@ -4,7 +4,7 @@ LABEL devops="anup dudhe"
 USER root
 
 RUN  apt update 
-RUN  apt install git -y
+RUN  apt install git  python3 -y
 RUN  apt install python3-pip -y 
 RUN  pip3 install virtualenv   
 RUN  virtualenv venv 
@@ -17,9 +17,9 @@ RUN    pip install Django
 
 WORKDIR python-django
 
-RUN python manage.py makemigrations  && \
-    python manage.py migrate && \
-    python manage.py runserver
+RUN python manage.py makemigrations
+RUN python manage.py migrate 
+RUN python manage.py runserver
     
 RUN echo "from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.create_superuser('admin', 'anupdudhe530@gmail.com', '12345678')" | python manage.py shell
 
