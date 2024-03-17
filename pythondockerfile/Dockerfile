@@ -21,7 +21,7 @@ WORKDIR python-django
 # RUN python manage.py migrate 
 # RUN python manage.py runserver
     
-RUN echo "from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.create_superuser('admin', 'anupdudhe530@gmail.com', '12345678')" | python manage.py shell
+#RUN echo "from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.create_superuser('admin', 'anupdudhe530@gmail.com', '12345678')" | python manage.py shell
 
 
 EXPOSE  8000   
