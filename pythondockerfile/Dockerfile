@@ -7,7 +7,7 @@ RUN apt update
 RUN    apt install python3-pip -y 
 RUN    pip3 install virtualenv   
 RUN    virtualenv venv 
-RUN    source venv/bin/activate 
+RUN    source .venv/bin/activate 
 RUN    apt update
     
 RUN git clone https://github.com/mushfiq1998/string-tools-with-python-django.git && \
