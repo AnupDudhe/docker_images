@@ -18,9 +18,9 @@ RUN    pip install Django
 
 WORKDIR python-django
 
- RUN python manage.py makemigrations
- RUN python manage.py migrate 
- RUN python manage.py runserver
+#  RUN python manage.py makemigrations
+#  RUN python manage.py migrate 
+#  RUN python manage.py runserver
     
 #RUN echo "from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.create_superuser('admin', 'anupdudhe530@gmail.com', '12345678')" | python manage.py shell
 
@@ -30,6 +30,6 @@ EXPOSE  8000
 #CMD ["sh", "-c", ". venv/bin/activate && python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"]
 #CMD ["sh", "-c", "source venv/bin/activate && python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"]
 #ENTRYPOINT ["python", "manage.py", "runserver", "0.0.0.0:8000"]
-#ENTRYPOINT ["sh", "-c", ". venv/bin/activate && python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"]
+ENTRYPOINT ["sh", "-c", ". venv/bin/activate && python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"]
 #CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]  
 CMD /bin/bash
