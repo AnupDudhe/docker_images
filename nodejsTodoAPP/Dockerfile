@@ -5,7 +5,7 @@ LABEL app = "todoAPP"
 
 RUN apt update 
 
-RUN apt install node npm -y
+RUN apt install nodejs npm -y
 
 RUN git clone https://github.com/owanhunte/nodejs-chat-app.git
 
