@@ -3,7 +3,7 @@ FROM ubuntu:latest
 
 LABEL app = "todoAPP"
 
-RUN sudo apt update 
+RUN apt update 
 
 RUN apt install node npm -y
 
