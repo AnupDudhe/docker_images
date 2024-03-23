@@ -15,7 +15,7 @@ ENV MYSQL_USER=$MYSQL_USER
 ENV MYSQL_PASSWORD=$MYSQL_PASSWORD
 ENV MYSQL_ROOT_PASSWORD=$MYSQL_ROOT_PASSWORD
 
-COPY data.sql /etc/mysql/student.sql
+COPY student.sql /etc/mysql/student.sql
 
 RUN sed -i 's/MYSQL_DATABASE/'$MYSQL_DATABASE'/g' /etc/mysql/student.sql
 RUN cp /etc/mysql/student.sql /docker-entrypoint-initdb.d
